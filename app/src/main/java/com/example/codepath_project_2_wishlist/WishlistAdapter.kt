@@ -1,9 +1,13 @@
 package com.example.codepath_project_2_wishlist
 
+
+import android.content.ContentResolver
+import android.provider.Settings.Global.getString
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+
 import androidx.recyclerview.widget.RecyclerView
 
 class WishlistAdapter(private val item: List<Item>,
@@ -25,7 +29,7 @@ class WishlistAdapter(private val item: List<Item>,
         val i = item.get(position)
         //TODO: Set item views based on views and data model
         holder.nameTextView.text = i.name
-        holder.priceTextView.text = i.price.toString()
+        holder.priceTextView.text = "\$" + i.price.toString()
         holder.urlTextView.text = i.url
     }
 

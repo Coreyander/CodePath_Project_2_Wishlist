@@ -2,7 +2,7 @@ package com.example.codepath_project_2_wishlist
 
 class ItemFetcher {
     companion object {
-        private val name = listOf("Jack", "Sally")
+        private val name = listOf("Fish", "Chips")
         private const val price = 2.50
         private val url = listOf("https://www.WhoaItWorks.com", "https://www.amazon.com")
 

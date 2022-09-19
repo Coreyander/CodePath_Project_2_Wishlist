@@ -3,5 +3,6 @@
     <string name="name">Item Name</string>
     <string name="store">Store or URL</string>
     <string name="price">Price</string>
+    <string name="url">$s$s</string>
     <string name="submit">Submit</string>
 </resources>
