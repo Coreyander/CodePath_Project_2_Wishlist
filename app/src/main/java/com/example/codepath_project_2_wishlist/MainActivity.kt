@@ -1,12 +1,17 @@
 package com.example.codepath_project_2_wishlist
 
 import android.annotation.SuppressLint
+import android.content.ActivityNotFoundException
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.codepath_project_2_wishlist.databinding.ActivityMainBinding
@@ -60,7 +65,14 @@ class MainActivity : AppCompatActivity(), WishlistAdapter.OnItemClickListener {
     }
 
     override fun onItemClick(position: Int) {
-        TODO("Future implementation of intents")
+        try {
+            val url = items[position].url
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
+        } catch (e: ActivityNotFoundException) {
+            Toast.makeText(this, "Invalid URL for " + items[position].url, Toast.LENGTH_LONG).show()
+        }
     }
 
     //Long click deletes wishlist entry at click position
