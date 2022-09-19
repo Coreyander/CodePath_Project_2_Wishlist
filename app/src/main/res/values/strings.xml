@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CodePath_Project_2_Wishlist</string>
+    <string name="name">Item Name</string>
+    <string name="store">Store or URL</string>
+    <string name="price">Price</string>
+    <string name="submit">Submit</string>
+</resources>
